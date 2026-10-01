@@ -27,7 +27,7 @@
  --cam:#C48429;       /* cam logo – CHỈ nút gọi + vài đường viền nhỏ */
  --cam-hover:#D39540;
  --cam-chu:#2B1A0C;   /* chữ trên nền cam */
- --dong:#8A5A1E;      /* đồng/bronze: chữ nhỏ in hoa (kicker), nhãn phụ trên nền sáng */
+ --dong:#8A5A1E;      /* đồng/bronze: chữ nhỏ in hoa (kicker), chữ phụ trên nền sáng */
  --kem:#FBF6EC;       /* nền trang */
  --kem-sang:#FFFDF8;  /* nền mục "trắng", thẻ */
  --be:#F3E8D6;        /* be: ô ảnh chờ, nền phụ */
@@ -361,6 +361,7 @@ mark.tt-xn{background:#FFE9A8;color:#5A3214;padding:0 4px;border-radius:4px;font
 .prod>.photo{aspect-ratio:auto}
 .prod>.photo img{aspect-ratio:16/10;height:auto;object-fit:cover}
 .prod>.photo figcaption{margin:0;padding:8px 16px;border-bottom:1px solid var(--vien);text-align:left;font-size:13px;color:var(--dong)}
+.steps-sc{padding-left:1.3em;margin:0 0 .6em}.steps-sc li{margin:.35em 0}
 .card-light .photo.mockup{margin-top:14px}
 .card-light .photo.mockup img{width:auto;max-width:100%;max-height:300px;margin:0 auto}
 .ph-grid .photo.mockup img{max-height:340px}
