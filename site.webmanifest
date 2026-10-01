@@ -4,8 +4,8 @@
  "lang": "vi",
  "start_url": "/",
  "display": "browser",
- "theme_color": "#456A25",
- "background_color": "#F4F9EF",
+ "theme_color": "#925222",
+ "background_color": "#FBF6EC",
  "icons": [
   {
    "src": "/icon-192.png",
