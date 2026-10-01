@@ -278,3 +278,110 @@ ul{padding-left:1.2em}
   .page-hero.hero-anh{background-image:linear-gradient(100deg,rgba(90,50,20,.95) 0%,rgba(110,61,25,.90) 60%,rgba(110,61,25,.88) 100%),image-set(url(../img/xuong/xuong-khu-so-che-toan-canh.webp) type("image/webp"),url(../img/xuong/xuong-khu-so-che-toan-canh.jpg) type("image/jpeg"))}
  }
 }
+
+/* ==== MỤC CÂU CHUYỆN (/cau-chuyen/) – chép từ bai-viet/mau-trang/tin-tuc.css + bổ sung; gen_site.py:ensure_css() tự thay khối này ==== */
+/* Vũ Điền Farm – CSS BỔ SUNG cho mục "Tin tức / Câu chuyện" (ĐỀ XUẤT, chưa nằm trong site.css).
+   Dùng lại biến màu của site.css (chủ đề nâu đất). Mọi lớp mới đều có tiền tố .tt-
+   Khi tích hợp: chép toàn bộ tệp này xuống cuối site/assets/css/site.css. */
+
+/* bộ lọc mục (tĩnh – có thể làm bằng trang /tin-tuc/<muc>/) */
+.tt-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.tt-chip{border:1px solid var(--vien);background:var(--kem);color:var(--chu);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.tt-chip.on{background:var(--nau);border-color:var(--nau);color:#fff}
+
+/* thẻ bài */
+.tt-grid{display:grid;gap:22px;grid-template-columns:1fr}
+.tt-card,.tt-feature{position:relative;background:var(--kem-sang);border:1px solid var(--vien);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(63,39,22,.04),0 12px 28px -18px rgba(63,39,22,.25);transition:transform .15s,box-shadow .15s}
+.sec-white .tt-card{background:var(--kem)}
+.tt-card:hover,.tt-feature:hover{transform:translateY(-2px);box-shadow:0 18px 34px -18px rgba(63,39,22,.35)}
+.tt-card-link{position:absolute;inset:0;z-index:2}
+.tt-card-link:focus-visible{outline:3px solid var(--cam);outline-offset:-3px;border-radius:18px}
+.tt-media{position:relative;aspect-ratio:16/10;min-height:0;margin:0;overflow:hidden;background:var(--be)}
+.tt-media img{width:100%;height:100%;object-fit:cover}
+.tt-media.ph{border:0;border-bottom:2px dashed var(--ke);border-radius:0}
+.tt-minhhoa{position:absolute;right:8px;bottom:8px;background:rgba(43,26,12,.55);color:#FFF8EC;font-size:11px;padding:2px 8px;border-radius:6px}
+.tt-card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.tt-card-body h3{font-size:1.25rem;margin:2px 0 8px}
+.tt-card-body p{font-size:15px;margin:0 0 14px}
+.tt-more{margin-top:auto;color:var(--nau);font-weight:600;font-size:15px}
+.tt-feature{margin-bottom:26px}
+.tt-feature-body{padding:24px}
+.tt-feature-body h2{margin:4px 0 10px}
+.tt-note{margin:26px 0 0;font-size:13px;color:var(--dong)}
+
+/* trang bài viết */
+.tt-hero h1{max-width:900px}
+.tt-layout{display:grid;gap:34px}
+.tt-article{min-width:0}
+.tt-hero-fig{margin:0 0 26px}
+.tt-hero-fig .tt-media{border-radius:16px;aspect-ratio:16/9}
+.tt-hero-fig figcaption{font-size:13px;color:var(--dong);margin-top:8px}
+.tt-prose{max-width:720px;font-size:17px;line-height:1.75}
+.tt-prose h2{font-size:1.6rem;margin:1.6em 0 .5em}
+.tt-prose h3{font-size:1.25rem;margin:1.3em 0 .4em}
+.tt-prose ul,.tt-prose ol{padding-left:1.3em;margin:0 0 1.1em}
+.tt-prose li{margin:.3em 0}
+.tt-prose blockquote{margin:1.4em 0;padding:14px 20px;border-left:3px solid var(--cam);background:var(--kem);border-radius:0 12px 12px 0;font-family:"Bodoni 72","Libre Bodoni",Georgia,serif;font-size:1.12rem;color:var(--nau-dam)}
+.tt-prose a{text-decoration-color:var(--cam);text-underline-offset:3px}
+.tt-table{overflow-x:auto;margin:0 0 1.2em}
+.tt-table table{border-collapse:collapse;width:100%;font-size:15px;background:var(--kem-sang)}
+.tt-table th,.tt-table td{border:1px solid var(--vien);padding:9px 12px;text-align:left;vertical-align:top}
+.tt-table th{background:var(--be);color:var(--nau-dam)}
+mark.tt-xn{background:#FFE9A8;color:#5A3214;padding:0 4px;border-radius:4px;font-size:.88em;font-weight:600} /* chỉ có trong bản nháp */
+.tt-share{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:30px 0 0;padding-top:18px;border-top:1px solid var(--vien);font-weight:600;font-size:14px}
+.tt-share .btn{padding:8px 14px;font-size:14px}
+.tt-aside{display:grid;gap:18px;align-content:start}
+.tt-aside-box h3{margin-top:4px}
+.tt-prod{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--vien);text-decoration:none;color:var(--chu)}
+.tt-prod img{width:64px;height:64px;object-fit:cover;border-radius:10px;flex:none}
+.tt-prod b{display:block;color:var(--nau)}
+.tt-prod small{font-size:13px}
+.tt-small{font-size:13px;margin:12px 0 0;color:var(--dong)}
+.tt-aside-cta{border:1px solid var(--vien)}
+
+@media (min-width:700px){
+  .tt-grid{grid-template-columns:repeat(2,1fr)}
+  .tt-feature{display:grid;grid-template-columns:1.1fr 1fr}
+  .tt-feature .tt-media{aspect-ratio:auto;height:100%;min-height:320px}
+  .tt-feature .tt-media.ph{border-bottom:0;border-right:2px dashed var(--ke)}
+  .tt-feature-body{padding:34px;align-self:center}
+}
+@media (min-width:1080px){
+  .tt-grid{grid-template-columns:repeat(3,1fr)}
+  .tt-grid-3{grid-template-columns:repeat(3,1fr)}
+  .tt-layout{grid-template-columns:minmax(0,1fr) 330px;gap:52px}
+  .tt-aside{position:sticky;top:100px}
+}
+.tt-prod-ph{width:64px;height:64px;flex:none;border-radius:10px;border:2px dashed var(--ke);background:repeating-linear-gradient(45deg,#F1E6D3 0 8px,#F7EFE2 8px 16px);display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;line-height:1.2;font-weight:600;color:var(--nau-dam)}
+.tt-hero-fig .tt-media img{object-position:center 28%}
+
+/* bổ sung khi tích hợp (2026-10-01) */
+.photo.mockup img{aspect-ratio:auto!important;object-fit:contain!important;height:auto!important;background:#EFE3CF}
+.photo.mockup figcaption{font-weight:600;font-size:13px;color:var(--dong)}
+.prod>.photo{aspect-ratio:auto}
+.prod>.photo img{aspect-ratio:16/10;height:auto;object-fit:cover}
+.prod>.photo figcaption{margin:0;padding:8px 16px;border-bottom:1px solid var(--vien);text-align:left;font-size:13px;color:var(--dong)}
+.card-light .photo.mockup{margin-top:14px}
+.card-light .photo.mockup img{width:auto;max-width:100%;max-height:300px;margin:0 auto}
+.ph-grid .photo.mockup img{max-height:340px}
+.tt-media picture{display:block;width:100%;height:100%}
+.tt-media-mockup{background:var(--be)}
+.tt-media-mockup img{object-fit:contain!important}
+.tt-media-mockup figcaption{position:absolute;left:8px;top:8px;background:rgba(43,26,12,.6);color:#FFF8EC;font-size:11px;font-weight:600;padding:2px 8px;border-radius:6px}
+.tt-hero-fig .tt-media.tt-media-mockup{aspect-ratio:auto;display:flex;justify-content:center;padding:18px}
+.tt-hero-fig .tt-media.tt-media-mockup picture{width:auto;height:auto}
+.tt-hero-fig .tt-media.tt-media-mockup img{width:auto;max-width:100%;max-height:560px;height:auto}
+.tt-media-text{display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:22px 24px;background:linear-gradient(135deg,var(--nau-toi) 0%,var(--nau-dam) 55%,var(--nau) 100%);color:var(--chu-sang);border-bottom:3px solid var(--cam)}
+.tt-media-text b{font-family:"Bodoni 72","Libre Bodoni",Georgia,serif;font-size:1.6rem;font-weight:600;line-height:1.15;color:var(--chu-sang)}
+.tt-media-text small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--vang-nhat)}
+.tt-media-text::before{content:"";display:block;width:46px;height:2px;background:var(--cam);margin-bottom:auto}
+.tt-texthead{margin:0 0 26px;padding:30px 32px;border-radius:16px;background:var(--kem);border:1px solid var(--vien);border-left:5px solid var(--cam)}
+.tt-texthead span{display:block;color:var(--dong);font-weight:600;letter-spacing:.16em;font-size:12px;text-transform:uppercase;margin-bottom:8px}
+.tt-texthead p{margin:0;font-family:"Bodoni 72","Libre Bodoni",Georgia,serif;font-size:1.35rem;line-height:1.45;color:var(--nau-dam)}
+.tt-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.4em 0}
+.tt-strip .photo img{aspect-ratio:1/1;object-fit:cover}
+.tt-strip .photo figcaption{font-size:13px}
+.tt-stories .btns{justify-content:center;margin-top:28px}
+/* menu 7 mục (thêm "Câu chuyện") – thu gọn khoảng cách để không tràn ngang */
+@media (min-width:1360px){.site-nav ul{gap:15px}.site-nav li a{font-size:14.5px}}
+@media (min-width:1080px) and (max-width:1279px){.site-nav ul{gap:10px}.site-nav li a{font-size:13px}.brand b{font-size:22px}}
