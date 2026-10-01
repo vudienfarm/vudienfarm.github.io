@@ -1,0 +1,5 @@
+# GitHub Pages: không xuất bản các tệp nội bộ
+exclude:
+  - README.md
+  - _preview
+  - _headers
