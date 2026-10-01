@@ -260,3 +260,21 @@ ul{padding-left:1.2em}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .gallery img{aspect-ratio:3/4;object-fit:cover}
 @media (min-width:1080px){.gallery{grid-template-columns:repeat(4,1fr);gap:22px}}
+/* Ảnh xưởng & vùng nguyên liệu từ máy chủ HTX (2026-10-01) – gen_site.py:photo() với class hero-photo / c43 / c169 / g-xuong */
+.hero .hero-photo img{aspect-ratio:4/5;object-fit:cover;border:3px solid rgba(246,227,193,.35);box-shadow:0 18px 40px -20px rgba(0,0,0,.55)}
+.ph-grid .photo.c43 img,.grid4 .photo.c43 img{aspect-ratio:4/3;object-fit:cover}
+.ph-grid .photo.c169 img{aspect-ratio:16/10;object-fit:cover}
+.ph-grid .photo.wide{grid-column:1/-1}
+.gallery.g-xuong img{aspect-ratio:4/3}
+@media (min-width:1080px){.hero .hero-photo img{max-height:520px}}
+/* Nền ảnh mờ dưới lớp nâu cho page-hero trang Về xưởng. Lớp phủ ≥ 88 % nâu đậm: chữ kem vẫn ≥ 5,5:1 kể cả trên điểm ảnh trắng nhất (AA). */
+.page-hero.hero-anh{background-color:var(--nau-toi);background-image:linear-gradient(100deg,rgba(90,50,20,.95) 0%,rgba(110,61,25,.90) 60%,rgba(110,61,25,.88) 100%),url(../img/xuong/xuong-khu-so-che-toan-canh-600.jpg);background-size:cover;background-position:center}
+@supports (background-image:image-set(url(a.webp) type("image/webp"))){
+ .page-hero.hero-anh{background-image:linear-gradient(100deg,rgba(90,50,20,.95) 0%,rgba(110,61,25,.90) 60%,rgba(110,61,25,.88) 100%),image-set(url(../img/xuong/xuong-khu-so-che-toan-canh-600.webp) type("image/webp"),url(../img/xuong/xuong-khu-so-che-toan-canh-600.jpg) type("image/jpeg"))}
+}
+@media (min-width:700px){
+ .page-hero.hero-anh{background-image:linear-gradient(100deg,rgba(90,50,20,.95) 0%,rgba(110,61,25,.90) 60%,rgba(110,61,25,.88) 100%),url(../img/xuong/xuong-khu-so-che-toan-canh.jpg)}
+ @supports (background-image:image-set(url(a.webp) type("image/webp"))){
+  .page-hero.hero-anh{background-image:linear-gradient(100deg,rgba(90,50,20,.95) 0%,rgba(110,61,25,.90) 60%,rgba(110,61,25,.88) 100%),image-set(url(../img/xuong/xuong-khu-so-che-toan-canh.webp) type("image/webp"),url(../img/xuong/xuong-khu-so-che-toan-canh.jpg) type("image/jpeg"))}
+ }
+}
