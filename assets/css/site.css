@@ -104,6 +104,11 @@ ul{padding-left:1.2em}
 /* "đang cập nhật" note */
 .cap-nhat{display:inline-block;background:#FBEFDC;color:var(--xs);border:1px solid var(--cam);font-size:12px;font-weight:600;padding:1px 8px;border-radius:5px;vertical-align:middle;white-space:nowrap}
 
+/* "Sắp có" – túi bán lẻ 300 g, 500 g chưa nhận đặt hàng (bỏ khi có hàng) */
+.sap-co{display:inline-block;background:#FFF4E0;color:var(--xs);border:1px solid var(--cam);font-family:"Be Vietnam Pro",system-ui,sans-serif;font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.02em;padding:1px 9px;border-radius:999px;vertical-align:middle;white-space:nowrap}
+.hero h1{text-wrap:balance}
+.hero h1 .nw{white-space:nowrap} /* giữ "tinh hoa hiện đại" trên một dòng */
+
 /* product cards */
 .prod{border:1px solid var(--vien);border-radius:18px;overflow:hidden;background:var(--kem);display:flex;flex-direction:column}
 .prod .ph{border-radius:0;border:0;border-bottom:2px dashed #a9cc8a}
